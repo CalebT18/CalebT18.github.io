@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        body {
+            background-image: url(pexels-cottonbro-5602529.jpg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        p {
+            color: white;
+            font-family: fantasy;
+            font-size: larger;
+            background-color: black;
+            padding: 20px;
+            max-width: 800px;
+            border: 2px solid #f5f5f5;
+        }
+
+        
+        .home-button {
+            background-color: purple;
+    color: white;
+    font-size: 18px;
+    padding: 10px 20px;
+    border: solid black;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-decoration: none;
+        }
+
+        .home-button:hover {
+            background-color: violet;
+            transform: scale(1.1);
+        }
+
+        
+        .choice-button {
+            background-color: #1e1e1e;
+            border: 2px solid #f5f5f5;
+            color: #f5f5f5;
+            padding: 15px 30px;
+            margin: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: fantasy;
+        }
+
+        .choice-button:hover {
+            background-color: #333333; 
+    transform: scale(1.1);
+    
+        }
+
+        .Deco-Button-Container {
+             display: flex;
+             flex-direction: row;
+             justify-content: center;
+             align-items: center;
+             gap: 20px; 
+             margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    
+    <a href="Index.html">
+        <button class="home-button">Back To Home</button>
+    </a>
+
+    <p>
+        You are running through the woods, your feet pounding against the dirt, 
+        twigs snapping beneath you like bones cracking in the silence. 
+        You wear floppy bunny ears and grip a half-eaten carrot—part of the game, part of the mockery. 
+        The darkness around you feels alive, thick with the tension of the hunt. 
+        The trees blur past, their shadows stretching like claws.<br><br>
+
+        You don’t know how long you’ve been running, 
+        only that you’re not ready to stop. Then, up ahead, the path splits in two. 
+        On the left: a narrow cave entrance, barely visible but promising shelter. 
+        On the right: a hooded stranger standing in a small clearing, 
+        hand outstretched, voice calm. “I can help you.”<br><br>
+
+        What do you say?
+    </p>
+
+  
+    <div class="Deco-Button-Container">
+        <a href="HideInTheCave(HuntedChoice2).html">
+            <button class="choice-button">Hide In Cave</button>
+        </a>
+
+        <a href="TrustTheStranger(HuntedChoice2).html">
+            <button class="choice-button">Trust The Stranger</button>
+        </a>
+    </div>
+
+</body>
+</html>
