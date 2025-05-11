@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mother's Day Special</title>
+    <style>
+        /* Background gradient */
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+        body {
+            margin: 0;
+            height: 100vh;
+            background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+            font-family: 'Arial', sans-serif;
+        }
+
+        /* Mother's Day Heading */
+        h1 {
+            position: absolute;
+            top: 30px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 60px;
+            color: #ffffff;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .button-container {
+            display: flex;
+            gap: 60px;
+            position: relative;
+            top: 50px;
+        }
+
+        .fancy-button {
+            text-decoration: none;
+            color: white;
+            background-color: #ff5e6c;
+            padding: 15px 30px;
+            border-radius: 50px;
+            font-size: 20px;
+            font-weight: bold;
+            box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .fancy-button:hover {
+            background-color: #ff3b4f;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+            transform: scale(1.05);
+        }
+
+        /* Arrow Icons */
+        .arrow {
+            margin-top: 10px;
+            display: block;
+            width: 30px;
+            height: 30px;
+            border-left: 3px solid white;
+            border-bottom: 3px solid white;
+            transform: rotate(-45deg);
+            margin-left: 42%;
+            animation: bounce 1s infinite;
+        }
+
+        @keyframes bounce {
+            0%, 100% {
+                transform: rotate(-45deg) translateY(0);
+            }
+            50% {
+                transform: rotate(-45deg) translateY(5px);
+            }
+        }
+
+        /* Heart Animation */
+        #heart-container {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+        }
+
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 105, 135, 0.8);
+            transform: rotate(45deg);
+            animation: floatUp 5s infinite;
+            opacity: 0.8;
+        }
+
+        .heart::before,
+        .heart::after {
+            content: "";
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: rgba(255, 105, 135, 0.8);
+            border-radius: 50%;
+        }
+
+        .heart::before {
+            top: -10px;
+            left: 0;
+        }
+
+        .heart::after {
+            left: 10px;
+            top: 0;
+        }
+
+        @keyframes floatUp {
+            0% {
+                transform: translateY(600px) rotate(45deg);
+                opacity: 0.8;
+            }
+            100% {
+                transform: translateY(-1000px) rotate(45deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Happy Mother's Day ❤️</h1>
+    <div class="button-container">
+        <a href="Nani.html" class="fancy-button">Nani
+            <span class="arrow"></span>
+        </a>
+        <a href="Auntie.html" class="fancy-button">Auntie
+            <span class="arrow"></span>
+        </a>
+    </div>
+    <div id="heart-container"></div>
+
+    <script>
+        const heartContainer = document.getElementById('heart-container');
+
+        function createHeart() {
+            const heart = document.createElement('div');
+            heart.classList.add('heart');
+            heart.style.left = Math.random() * 100 + 'vw';
+            heart.style.animationDuration = Math.random() * 3 + 2 + 's';
+            heartContainer.appendChild(heart);
+
+            setTimeout(() => {
+                heart.remove();
+            }, 5000);
+        }
+
+        setInterval(createHeart, 300);
+    </script>
+</body>
+</html>
