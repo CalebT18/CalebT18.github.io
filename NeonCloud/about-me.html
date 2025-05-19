@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <style>
+
+        /* CLOUD ANIMATION */
+        .cloud {
+            position: absolute;
+            background-color: #ffffff;
+            border-radius: 50%;
+            box-shadow: -30px 20px 0px 5px #ffffff,
+                        30px 20px 0px 5px #ffffff,
+                        0px 20px 0px 15px #ffffff;
+            opacity: 0.8;
+            animation: float 45s linear infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateX(0px);
+            }
+            100% {
+                transform: translateX(120vw);
+            }
+        }
+
+        .cloud:nth-child(1) {
+            width: 105px;
+            height: 70px;
+            top: 10%;
+            left: -20%;
+            animation-duration: 60s; 
+        }
+
+        .cloud:nth-child(2) {
+            width: 200px;
+            height: 90px;
+            top: 30%;
+            left: -30%;
+            animation-duration: 50s;
+        }   
+
+        .cloud:nth-child(3) {
+            width: 100px;
+            height: 50px;
+            top: 50%;
+            left: -10%;
+            animation-duration: 70s;
+        }
+
+        /* BODY STYLING */
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f8cfe3;
+            font-family: 'Pixelify Sans', sans-serif;
+            overflow-x: hidden;
+            cursor: url(icons8-cursor-30.png), auto; 
+        }
+
+        /* TITLE */
+        h1 {
+            color: #ff69b4;
+            text-align: center;
+            margin-top: 50px;
+
+        }
+
+        /* ABOUT CONTAINER */
+        .about-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+        }
+
+        /* AVATAR STYLING */
+        .avatar img {
+            border-radius: 50%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* TEXT PARAGRAPH */
+        p {
+            color: #333;
+            max-width: 600px;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        /* BUTTON STYLING */
+        .home-button {
+            background-color: #ff69b4;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            font-family: 'Pixelify Sans', sans-serif;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .home-button:hover {
+            background-color: #fbaed4;
+            color: black;
+        }
+        
+    </style>
+</head>
+<body>
+
+    <!-- CLOUD ELEMENTS -->
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+    <div class="cloud"></div>
+
+    <!-- TITLE -->
+    <h1>About Me</h1>
+
+    <!-- ABOUT SECTION -->
+    <div class="about-container">
+        <div class="avatar">
+            <img src="DogAvatar.png" alt="Avatar" width="150" height="150">
+        </div>
+        <p>
+            HII 👋🏿 I'm Caleb, The creator of Neon Cloud. A web designer and developer(in the making) student with time on my hands 💗
+        </p>
+        <a href="index.html">
+            <button class="home-button">Home</button>
+        </a>
+    </div>
+
+</body>
+</html>
