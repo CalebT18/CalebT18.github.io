@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neon Cloud</title> <!-- Title Updated -->
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Navigation Bar */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 20px;
+            position: fixed;
+            width: 100%;
+            background-color: transparent; 
+            z-index: 1000;
+            padding: 10px 0;
+        }
+        /*service_bn6fh7e */
+        /* Cloud Button Animation */
+        .cloud-button {
+            position: relative;
+            padding: 15px 30px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 30px; 
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            animation: floaty 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes floaty {
+            0% {
+                transform: translateY(0px);
+            }
+            100% {
+                transform: translateY(5px); 
+            }
+        }
+
+        .cloud-button:hover {
+            background-color: #ff85c1;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+            animation: hoverBounce 0.3s ease-in-out;
+        }
+
+        @keyframes hoverBounce {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Main Page Background */
+        body {
+            margin: 0;
+            padding: 0;
+            background-image: url(jake-weirick-dWUPJdXiC-M-unsplash.jpg);
+            background-size: cover;
+            background-attachment: fixed; 
+            background-position: center;
+            cursor: url(icons8-cursor-30.png), auto; 
+            position: relative;
+        }
+
+        /* Star Canvas */
+        canvas {
+            position: fixed;  
+            top: 0;
+            left: 0;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        /* Page Sections */
+        section {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 2rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Section Buttons */
+        .section-button {
+            margin-top: 20px;
+            background-color: #ff69b4;
+            color: white;
+            border: none;
+            font-size: 16px;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            display: inline-block;
+            text-decoration: none; 
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            animation: floaty 3s ease-in-out infinite alternate;
+        }
+
+        .section-button:hover {
+            background-color: #ff85c1;
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>           
+<body>
+    <nav>
+        <div class="cloud-button" onclick="smoothScroll('home')">Home</div>
+        <div class="cloud-button" onclick="smoothScroll('read-comics')">Read Comics</div>
+        <div class="cloud-button" onclick="smoothScroll('about-me')">About Me</div>
+        <div class="cloud-button" onclick="smoothScroll('newsletter')">Newsletter</div>
+    </nav>
+
+    <section id="home">
+        <p>Welcome to Neon Cloud</p>
+        <a href="home.html" class="section-button">Go Home</a>
+    </section>
+    
+    <section id="read-comics">
+        <p>Read your favorite comics here! 📚</p>
+        <a href="read-comics.html" class="section-button">Go To Comic</a>
+    </section>
+
+    <section id="about-me">
+        <p>Learn more about me! 👤</p>
+        <a href="about-me.html" class="section-button">About Me</a>
+    </section>
+
+    <section id="newsletter">
+        <p>Join the newsletter for updates! 📰</p>
+        <a href="newsletter.html" class="section-button">Join Newsletter</a>
+    </section>
+
+    <script src="p5-3/p5.js"></script>
+    <script src="p5-3/p5.dom.js"></script>
+    <script src="p5-3/p5.sound.js"></script>
+    <script src="Designs.js"></script>
+
+    <script>
+        function smoothScroll(target) {
+            document.getElementById(target).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+</body>
+</html>
