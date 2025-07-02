@@ -1,0 +1,104 @@
+body {
+    background-image: url(Images/loveislandintropage.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden;
+    
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+}
+
+.text-box {
+    background-color: rgba(255, 192, 203, 0.7); /* Transparent pink */
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    margin: 20px auto;
+    font-size: 16px;
+    color: #000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+/* Your button styles can stay exactly the same! No changes needed there. */
+.Start {
+    background-color: #ffc0cb; /* Soft pastel pink */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 15px 30px; /* Bigger, pill-shaped button */
+    font-size: 18px;
+    border-radius: 50px; /* Super round edges */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    letter-spacing: 1px; /* Slightly spaced text for clean look */
+    font-weight: bold;
+}
+
+.Start:hover {
+    background-color: #ff69b4; /* Hot pink on hover */
+    transform: scale(1.05); /* Subtle bounce */
+}
+
+.Start:active {
+    transform: scale(0.98); /* Cute little press-in effect */
+}
+
+
+/* Logo styles */
+.logo {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 50px;
+    height: auto;
+    cursor: pointer;
+    z-index: 1000;
+    transition: all 0.3s ease; /* Smooth hover in & out */
+}
+
+.logo:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px gold);
+}
+
+.newsletter {
+    position: fixed;
+    bottom: 40px;  /* Distance from the bottom of the screen */
+    left: 40px;    /* Distance from the left side of the screen */
+    background-color: #ffc0cb; /* Soft pastel pink */
+    color: #ffffff; /* White text */
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 50px; /* Super rounded edges */
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    letter-spacing: 1px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+.newsletter:hover {
+    background-color: #ff69b4; /* Hot pink on hover */
+    transform: scale(1.05);
+}
+
+.newsletter:active {
+    transform: scale(0.98);
+}
+

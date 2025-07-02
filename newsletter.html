@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Island Newsletter 💌</title>
+
+    <style>
+        /* 💖 Page Styling */
+        body {
+            background-image: url(Images/loveislandnewsletterpage.png); /* Make sure this file is in the same folder! */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+            position: relative;
+        }
+
+        /* 💌 Container Styling */
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.85);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 500px;
+        }
+
+        h1 {
+            color: #ff1493;
+            margin-bottom: 20px;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            width: 80%;
+            border: none;
+            border-radius: 25px;
+            margin-bottom: 20px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        button {
+            background-color: #ffc0cb;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            font-size: 16px;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background-color: #ff69b4;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.98);
+        }
+
+        #confirmation-message {
+            color: #ff1493;
+            font-weight: bold;
+            margin-top: 20px;
+            display: none;
+        }
+
+        .back-button {
+            display: inline-block;
+            margin-top: 30px;
+            text-decoration: none;
+            color: #ff1493;
+            font-weight: bold;
+        }
+
+        .back-button:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Sign Up for Villa Updates 💌</h1>
+
+        <form
+            id="newsletter-form"
+            action="https://formspree.io/f/xjkrlkal"
+            method="POST"
+        >
+            <input type="email" name="email" id="email" placeholder="Fancy a text? Enter your email 💕" required>
+            <br><br>
+            <button type="submit">Subscribe 🏝️</button>
+        </form>
+
+        <p id="confirmation-message">
+            You’re all signed up! Expect villa gossip soon 💌🏝️
+        </p>
+
+        <a href="index.html" class="back-button">← Back to Home</a>
+    </div>
+
+    <script>
+        const form = document.getElementById('newsletter-form');
+        const confirmationMessage = document.getElementById('confirmation-message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const formData = new FormData(form);
+            fetch(form.action, {
+                method: form.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    form.reset();
+                    confirmationMessage.style.display = 'block';
+                } else {
+                    alert('Oops! Something went wrong. Please try again later.');
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
